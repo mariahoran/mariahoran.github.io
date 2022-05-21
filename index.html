@@ -1,0 +1,439 @@
+<html>
+    <head>
+        <title>Portfolio | Maria Horan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Portfolio for Maria Horan.">
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <style>
+            html,body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat;
+}
+
+/* Internal link header fix */
+.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
+header {
+    background: #444444;
+    height: 80px;
+    font-size: 1.5em;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header a {
+    color: #BBBBBB;
+    text-decoration: none;
+    margin-left: 2%;
+    margin-right: 2%;
+    vertical-align: -webkit-baseline-middle;
+    line-height: 80px;
+    transition: 1s;
+}
+
+header a:hover {
+    color: #FFFFFF;
+    transition: 1s;
+}
+
+nav {
+    margin-right: 4%;
+    height: 80px;
+}
+
+#logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#homeLink {
+    border-radius: 30px;
+}
+
+#div1 { 
+    background: url(images/h1.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(68, 68, 68, 0.7);
+    margin-top: 80px;
+    height: 750px;
+    width: 100%;
+    position: relative;
+}
+
+#div1 h1{
+    color: #FFFFFF;
+    font-size: 4em;
+    text-align: center;
+}
+
+#div1 h2{
+    color: #EEEEEE;
+    font-size: 3em;
+    text-align: center;
+}
+
+#textBox1 {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    position: fixed;
+    top: 20%;
+    text-align: center;
+}
+
+#div2 { 
+    background: url(images/h2.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 800px;
+}
+
+#block2 {
+    background: #BBBBBB;
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+
+#textBox2 {
+    margin-right: 20%;
+}
+
+#text2{
+    margin-left: 10%;
+}
+
+#textBox2 h1 {
+    color: #555555;
+    font-size: 3em;
+    text-align: right;
+}
+
+#textBox2 h2{
+    color: #444444;
+    font-size: 1.3em;
+    text-align: right;
+    transition: 0.5s;
+    line-height: 2em;
+    margin-top: 100px;
+}
+
+#div3 { 
+    background: url(images/h3.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 800px;
+}
+
+#block3 {
+    background: #555555;
+    height: 100%;
+    width: 45%;
+    float: left;
+}
+
+
+
+#textBox3 h1 {
+    color: #DDDDDD;
+    font-size: 3em;
+    text-align: left;
+    margin-left: 5%;
+}
+
+#text3 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#text3 a{
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.3s;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#text3 a:hover {
+    color: #EEEEEE;
+    transition: 0.3s;
+}
+
+#div4 { 
+    background: url(images/h4.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 800px;
+}
+
+#block4a {
+    width: 100%;
+    height: 20%;
+}
+
+#block4 {
+    background: rgba(68, 68, 68, 0.7);
+    height: 50%;
+    width: 100%;
+}
+
+#textBox4 {
+    margin-right: 10%;
+}
+
+form {
+    margin-left: 2em;
+}
+
+#textBox4 h1 {
+    color: #DDDDDD;
+    font-size: 3em;
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+}
+
+#div4 label {
+    color: #DDDDDD;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 1em;
+}
+
+#div4 textarea {
+    resize: none;
+    width: 100%;
+    margin: 1.5em;
+    margin-top: 0.5em;
+}
+
+textarea::selection, input::selection {
+    background: #BBBBBB;
+}
+
+#submit {
+    border: 1px solid #DDDDDD;
+    background: rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 50px;
+    color: #EEEEEE;
+    font-family: Montserrat;
+    font-size: 1.2em;
+    margin-left: 1.2em;
+    transition: 0.3s;
+}
+
+#submit:hover {
+    background: rgba(150, 150, 150, 0.3);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer {
+    background: #444444;
+    height: 150px;
+    width: 100%;
+    color: #AAAAAA;
+    text-align: center;
+}
+
+footer a{
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.3s;
+    margin: 5%;
+}
+
+footer a:hover {
+    color: #EEEEEE;
+    transition: 0.3s;
+}
+
+#space1 {
+    width: 100%;
+    height: 30px;
+}
+
+#space2 {
+    width: 100%;
+    height: 20px;
+}
+
+.show h1, .show h2{
+    transition: 0.3s;
+}
+
+.hide, .hide h1, .hide h2, .hide a{
+    color: rgba(0,0,0,0) !important;
+    transition: 0.3s;
+}
+
+.disappear {
+    top: -300px !important;
+    transition-delay: 1s;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0);
+}
+
+h1:hover, h2:hover {
+    cursor: default;
+}
+
+@media only screen and (max-width: 1000px){
+    nav {
+        display: none;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    #div1 {
+        margin-top: 0;
+        width: 100%;
+        height: 95%;
+    }
+
+    #block2, #block3 {
+        width: 100%;
+        height: 500px;
+    }
+
+    #textBox2 h2{
+        margin-top: 0;
+        font-size: 1em;
+    }
+
+    form {
+        margin-left: 0;
+    }
+
+}
+        </style>
+        <script>
+            window.addEventListener("load", function() {
+    scrollAdjust();
+})
+
+window.addEventListener("scroll", function() {
+    scrollAdjust();
+})
+
+function scrollAdjust() {
+    var fromTop = window.pageYOffset;
+    var height = window.innerHeight;
+    if(fromTop > height*0.15) {
+        textBox1.className = "hide disappear";
+    } else textBox1.className = "show";
+    if(fromTop > height*0.3) {
+        text2.className = "show";
+    } else text2.className = "hide";
+    if(fromTop > height*0.3+500) {
+        text3.className = "show";
+    } else text3.className = "hide";
+    if(fromTop > height*0.3+1600) {
+        block4.className = "show";
+    } else block4.className = "hide";
+}
+
+        </script>
+    </head>
+    <body>
+        <header>
+            <a id="homeLink" href="#top"><img id="logo" src="images/logo.png" alt="logo" height="60px;"></a>
+            <nav>
+                <a href="#info">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div id="div1">
+                <div id="textBox1" class="hide">
+                    <h1>Maria Horan</h1>
+                    <h2>Illustrator & Designer.</h2>
+                </div>
+            </div>
+            <div id="div2">
+                <a class="anchor" id="info"></a>
+                <div id="block2">
+                    <div id="textBox2">
+                        <h1>About Me</h1>
+                        <h2 id="text2" class="hide">
+                            I am a third year Bioinformatics student at Simon Fraser University in Vancouver, BC.
+                            I have worked as a Computer Science Teaching Assistant and IT Technician, and am currently applying for jobs in healthcare research.
+                            In the classroom, I helped students with programming in java, web development, and concepts in computer science.
+                            I one day hope to contribute to the genomic research field where I believe technology has yet to show its full potential.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div id="div3">
+                <a class="anchor" id="projects"></a>
+                <div id="block3">
+                    <div id="textBox3">
+                        <h1>Projects</h1>
+                        <p id="text3" class="hide">
+                            <a href="oChem/index.html" target="_blank">Organic Chemistry Study Tool</a>
+                            <a href="https://housemusic276.herokuapp.com" target="_blank">Music Interface</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="div4">
+                <a class="anchor" id="contact"></a>
+                <div id="block4a"></div>
+                <div id="block4">
+                    <div id="textBox4">
+                        <h1>Contact</h1>
+                        <form action="https://formspree.io/f/xaylzrvg" method="POST">
+                            <label for="name">Name:</label><input type="text" name="name" id="name" required><br>
+                            <label for="email">Email:</label> <input type="text" name="email" id="email" required><br><br>
+                            <label for="comment">Question or Comment:</label>
+                            <textarea type="text" name="comment" id="comment" rows="6" cols="60"></textarea><br><br>
+                            <input id="submit" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div id="space1"></div>
+                <a href="https://github.com/Chris-Horan" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/chris-horan-a77b5a112/" target="_blank">LinkedIn</a>
+                <div id="space2"></div>
+                <p>Copyright 2022.</p>
+            </footer>
+        </main>
+    </body>
+</html>
