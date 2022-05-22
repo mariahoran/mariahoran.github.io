@@ -28,7 +28,8 @@ header {
 }
 
 header a {
-    color: #BBBBBB;
+    color: #FFFFFF;
+    font-weight: bold;
     text-decoration: none;
     margin-left: 2%;
     margin-right: 2%;
@@ -38,8 +39,15 @@ header a {
 }
 
 header a:hover {
-    color: #FFFFFF;
+    color: #FFD615;
     transition: 1s;
+    border-top-width: 1;
+    border-bottom-width: 1;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #FFFFFF;
+    padding-top: 5;
+    padding-bottom: 5;
 }
 
 nav {
@@ -58,13 +66,12 @@ nav {
 }
 
 #div1 { 
-    background: url(images/h1.jpeg) no-repeat center center fixed; 
+    background: url(images/h1.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-blend-mode: overlay;
-    background-color: rgba(68, 68, 68, 0.7);
     margin-top: 80px;
     height: 750px;
     width: 100%;
@@ -72,13 +79,13 @@ nav {
 }
 
 #div1 h1{
-    color: #FFFFFF;
+    color: #000000;
     font-size: 4em;
     text-align: center;
 }
 
 #div1 h2{
-    color: #EEEEEE;
+    color: #444444;
     font-size: 3em;
     text-align: center;
 }
@@ -93,7 +100,7 @@ nav {
 }
 
 #div2 { 
-    background: url(images/h2.jpeg) no-repeat center center fixed; 
+    background: url(images/h2.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -102,7 +109,7 @@ nav {
 }
 
 #block2 {
-    background: #BBBBBB;
+    background: #94107F;
     height: 100%;
     width: 60%;
     float: right;
@@ -117,13 +124,13 @@ nav {
 }
 
 #textBox2 h1 {
-    color: #555555;
+    color: #FFFFFF;
     font-size: 3em;
     text-align: right;
 }
 
 #textBox2 h2{
-    color: #444444;
+    color: #FFFFFF;
     font-size: 1.3em;
     text-align: right;
     transition: 0.5s;
@@ -141,7 +148,7 @@ nav {
 }
 
 #block3 {
-    background: #555555;
+    background: #FFD615;
     height: 100%;
     width: 45%;
     float: left;
@@ -150,7 +157,7 @@ nav {
 
 
 #textBox3 h1 {
-    color: #DDDDDD;
+    color: #FFFFFF;
     font-size: 3em;
     text-align: left;
     margin-left: 5%;
@@ -162,7 +169,8 @@ nav {
 }
 
 #text3 a{
-    color: #CCCCCC;
+    color: #FFFFFF;
+    font-weight: bold;
     text-decoration: none;
     font-size: 1.5em;
     transition: 0.3s;
@@ -172,8 +180,15 @@ nav {
 }
 
 #text3 a:hover {
-    color: #EEEEEE;
+    color: #E02FC5;
     transition: 0.3s;
+    border-top-width: 2;
+    border-bottom-width: 2;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #FFFFFF;
+    padding-top: 5;
+    padding-bottom: 5;
 }
 
 #div4 { 
