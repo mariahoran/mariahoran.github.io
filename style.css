@@ -1,3 +1,25 @@
+:root {
+    /* --c1: #28928D;
+    --c2: #94107F;
+    --c3: #FFD615; */
+    --c1: #7165BF ;
+    --c2: #F24444 ;
+    --c3: #F0F2A7 ;
+    --c4: #F2D1C9;
+    --textHeader: #FFFFFF;
+    --textTitle: #000000;
+    --textSubtitle: #000000;
+    --textC1: #FFFFFF;
+    --textC2: #000000;
+    --textC3: var(--c2);
+    --accent1: #F2D1C9;
+    --accent2: #F0F2A7;
+    --accent3: #F24444;
+    
+
+}
+
+
 html,body {
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -17,7 +39,7 @@ body {
 }
 
 header {
-    background: #28948D;
+    background: var(--c1);
     height: 80px;
     font-size: 1.5em;
     text-align: right;
@@ -28,7 +50,7 @@ header {
 }
 
 header a {
-    color: #FFFFFF;
+    color: var(--textHeader);
     font-weight: bold;
     text-decoration: none;
     margin-left: 2%;
@@ -39,13 +61,13 @@ header a {
 }
 
 header a:hover {
-    color: #FFD615;
+    color: var(--accent1);
     transition: 1s;
     border-top-width: 1;
     border-bottom-width: 1;
     border-top-style: solid;
     border-bottom-style: solid;
-    border-color: #FFFFFF;
+    border-color: var(--accent);
     padding-top: 5;
     padding-bottom: 5;
 }
@@ -58,7 +80,7 @@ nav {
 #logo {
     float: left;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 #homeLink {
@@ -79,13 +101,13 @@ nav {
 }
 
 #div1 h1{
-    color: #000000;
+    color: var(--textTitle);
     font-size: 4em;
     text-align: center;
 }
 
 #div1 h2{
-    color: #444444;
+    color: var(--textSubtitle);
     font-size: 3em;
     text-align: center;
 }
@@ -100,18 +122,20 @@ nav {
 }
 
 #div2 { 
-    background: url(images/h2.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url(images/div2/1.png) no-repeat left center;
+    background-image: url(images/div2/1.png);
+    -webkit-background-size: 60%;
+    -moz-background-size: 60%;
+    -o-background-size: 60%;
+    background-size: 60%;
     height: 800px;
+    transition: 0.2s;
 }
 
 #block2 {
-    background: #94107F;
+    background: var(--c2);
     height: 100%;
-    width: 60%;
+    width: 40%;
     float: right;
 }
 
@@ -124,18 +148,40 @@ nav {
 }
 
 #textBox2 h1 {
-    color: #FFFFFF;
+    color: var(--textC1);
     font-size: 3em;
     text-align: right;
 }
 
-#textBox2 h2{
-    color: #FFFFFF;
-    font-size: 1.3em;
+#textBox2 a{
+    cursor: pointer;
+    color: var(--textC1);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.3s;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
     text-align: right;
-    transition: 0.5s;
-    line-height: 2em;
-    margin-top: 100px;
+}
+
+#text2 a:hover {
+    color: var(--accent2);
+    transition: 0.3s;
+}
+
+#text2 a.active {
+    color: var(--accent2);
+    font-size: 2em;
+    transition: 0.3s;
+    border-top-width: 2;
+    border-bottom-width: 2;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--accent2);
+    padding-top: 5;
+    padding-bottom: 5;
 }
 
 #div3 { 
@@ -148,7 +194,7 @@ nav {
 }
 
 #block3 {
-    background: #FFD615;
+    background: var(--c3);
     height: 100%;
     width: 45%;
     float: left;
@@ -157,7 +203,7 @@ nav {
 
 
 #textBox3 h1 {
-    color: #FFFFFF;
+    color: var(--textC2);
     font-size: 3em;
     text-align: left;
     margin-left: 5%;
@@ -169,7 +215,8 @@ nav {
 }
 
 #text3 a{
-    color: #FFFFFF;
+    cursor: pointer;
+    color: var(--textC2);
     font-weight: bold;
     text-decoration: none;
     font-size: 1.5em;
@@ -180,13 +227,19 @@ nav {
 }
 
 #text3 a:hover {
-    color: #E02FC5;
+    color: var(--accent3);
+    transition: 0.3s;
+}
+
+#text3 a.active {
+    color: var(--accent3);
+    font-size: 2em;
     transition: 0.3s;
     border-top-width: 2;
     border-bottom-width: 2;
     border-top-style: solid;
     border-bottom-style: solid;
-    border-color: #FFFFFF;
+    border-color: var(--accent);
     padding-top: 5;
     padding-bottom: 5;
 }
@@ -300,12 +353,12 @@ footer a:hover {
 
 .hide, .hide h1, .hide h2, .hide a{
     color: rgba(0,0,0,0) !important;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .disappear {
     top: -300px !important;
-    transition-delay: 1s;
+    transition-delay: 0.1s;
 }
 
 ::selection {
