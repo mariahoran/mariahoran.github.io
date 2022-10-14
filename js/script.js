@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
     scrollAdjust();
-    toggleList();
+    // toggleList();
 })
 
 window.addEventListener("scroll", function() {
@@ -15,38 +15,40 @@ function scrollAdjust() {
     } else textBox1.className = "show";
 }
 
-function toggleList() {
+function toggleList(item) {
     var list1 = document.getElementById("text2");
     var items1 = list1.getElementsByTagName("a");
 
     var list2 = document.getElementById("text3");
     var items2 = list2.getElementsByTagName("a");
 
-    
-    for (var i = 0; i < items1.length; i++) {
-        items1[i].addEventListener("click", function() {
+    if(item.classList.contains("t2")) {
+        for (var i = 0; i < items1.length; i++) {
             (list1.querySelector('.active')) ? list1.querySelector('.active').classList.remove('active') : '';
-            this.classList.add('active');
-            setImg("div2");
-        });
-    } 
+            item.classList.add('active');
+            var activeIndex = 0;
+            for (var i = 0; i < items1.length; i++) {
+                if(items1[i].classList.contains("active")) activeIndex = i;
+            }
+            setImg("hero2", activeIndex);
+        }
+    }
     
-    for (var i = 0; i < items2.length; i++) {
-        items2[i].addEventListener("click", function() {
+    if(item.classList.contains("t3")) {
+        for (var i = 0; i < items2.length; i++) {
             (list2.querySelector('.active')) ? list2.querySelector('.active').classList.remove('active') : '';
-            this.classList.add('active');
-            setImg("div3");
-        });
-    } 
+            item.classList.add('active');
+            var activeIndex = 0;
+            for (var i = 0; i < items2.length; i++) {
+                if(items2[i].classList.contains("active")) activeIndex = i;
+            }
+            setImg("hero3", activeIndex);
+        }
+    }
 }
 
-function setImg(divName) {
+function setImg(divName, activeIndex) {
     var div = document.getElementById(divName);
-    var items = div.getElementsByTagName("a");
 
-    activeIndex = 0;
-    for (var i = 0; i < items.length; i++) {
-        if(items[i].classList.contains("active")) activeIndex = i;
-    }
     div.style.backgroundImage = 'url(images/' + divName + '/' + activeIndex + '.png)';
 }
